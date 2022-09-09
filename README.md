@@ -2,7 +2,7 @@
 A simple task tracker is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app.
 
 ## How does this app work?
-Add your task(s) and you can start working on them by using our pomodoro timer. Each session consist of a 25 min of pomodoro session follows by 5 min of break. When click 'Completed', this app will also track your total time taken on each task.
+Add your task(s) and you can start working on them by using our pomodoro timer. Each pomodoro session consists of a 25 min of work session followed by a 5 min of break. When click 'Completed', this app will also track your total time taken on each task.
 
 **Link to project:** https://pomodoro-tasks-tracker.herokuapp.com/
 
