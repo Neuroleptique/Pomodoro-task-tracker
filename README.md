@@ -7,7 +7,7 @@ Add your task(s) and you can start working on them by using our pomodoro timer. 
 **Link to project:** https://pomodoro-tasks-tracker.herokuapp.com/
 
 ## How It's Made:
-**Tech used:** HTML, CSS, JavaScript, NODE, Express 
+**Tech used:** HTML, CSS, JavaScript, Node, Express 
 
 ## Packages/Dependencies used 
 bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
