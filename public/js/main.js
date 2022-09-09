@@ -92,6 +92,7 @@ async function markComplete() {
 
 function focusColor(){
 	console.log('change color')
+	this.classList.toggle('focus')
 }
 
 // Pomodoro timer and break session
