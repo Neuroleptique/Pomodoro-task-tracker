@@ -80,10 +80,10 @@ focusTask.onclick = function(event) {
 
 function highlight(tag) {
   if (selectedTr) {
-    selectedTr.parentNode.classList.remove('highlight');
+    selectedTr.parentNode.classList.remove('highlight', 'z-depth-2');
   }
   selectedTr = tag;
-  selectedTr.parentNode.classList.add('highlight');
+  selectedTr.parentNode.classList.add('highlight', 'z-depth-2');
 }
 
 // Pomodoro timer and break session
