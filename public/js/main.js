@@ -46,15 +46,15 @@ async function deleteTodo() {
 
 async function markComplete() {
 	const todoId = this.parentNode.parentNode.dataset.id
-	
-	// get session count 
 
-	//get duration 
+	// get session count
+
+	//get duration
 	const timeDuration = document.querySelector('#time')
 	const calculatedtimeDuration = 25 - Math.floor(parseInt(timeDuration.innerText))
 	// if task completed after a few pomodoro session, this line will add last session's duration to the total minutes spent
 	timer.totalMinute += calculatedtimeDuration
-	
+
 	try {
 		const response = await fetch('todos/markComplete', {
 			method: 'put',
@@ -139,9 +139,9 @@ function startTimer() {
 					break
 				default:
 					switchMode('pomodoro')
-	
+
 			}
-	// Move startTimer() to conditional	statement above because we want timer to stop after break	
+	// Move startTimer() to conditional	statement above because we want timer to stop after break
 		}
 	}, 1000)
 }
