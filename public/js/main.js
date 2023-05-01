@@ -20,10 +20,6 @@ Array.from(focusTask).forEach((el) => {
 	el.addEventListener('click', focusColor)
 })
 
-// Array.from(todoComplete).forEach((el) => {
-// 	el.addEventListener('click', markIncomplete)
-// })
-
 
 async function deleteTodo() {
 	const todoId = this.parentNode.parentNode.dataset.id
