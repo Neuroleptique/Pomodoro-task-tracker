@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <h6>Welcome <%= user.userName.replace(/\w/, c => c.toUpperCase()) %></h6>
 
     <div class="card container center timer">
@@ -43,37 +43,37 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="todoTask">
                 <% for( let i=0; i < todos.length; i++ ) { %>
                     <% if (!todos[i].completed) { %>
                         <tr data-id="<%= todos[i]._id %>">
-                            <td>
-                                <span class="task">
+                            <td class="task">
+
                                     <%= todos[i].todo %>
-                                </span>
+
                             </td>
 
                             <td>
-                                <span>
+
                                     <%= new Date(todos[i].Date).toDateString() || new Date(todos[i].date).toDateString() %>
-                                </span>
+
                             </td>
                             <td>
-                                <span>
+
                                     <% if(Math.ceil((new Date().getTime() - new Date(todos[i].Date).getTime()) / (1000*60*60*24) ) >= 5)  { %>
                                         Urgent!
                                     <% } %>
-                                    
-                                </span>
+
+
                             </td>
                             <td>
-                                
-                                <span class='btn hoverable del'> Delete </span>
-                                <span class="btn hoverable complete">Completed</span>
+
+                                <button class='btn hoverable del'> Delete </button>
+                                <button class="btn hoverable complete">Completed</button>
                             </td>
                         </tr>
                     <% } %>
-                    <% } %>
+                <% } %>
             </tbody>
         </table>
         <form class="row task-input" action="/todos/createTodo" method='POST'>
@@ -111,7 +111,7 @@
                             </td>
                         </tr>
                     <% } %>
-                    <% } %>
+                <% } %>
             </tbody>
         </table>
     </div>

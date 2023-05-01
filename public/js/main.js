@@ -2,7 +2,7 @@ const deleteBtn = document.querySelectorAll('.del')
 const todoItem = document.querySelectorAll('.complete')
 const todoComplete = document.querySelectorAll('span.completed')
 const startButton = document.querySelectorAll('.start')
-const focusTask = document.querySelectorAll('tr')
+const focusTask = document.getElementById('todoTask')
 
 Array.from(startButton).forEach((el) => {
 	el.addEventListener('click', startTimer)
@@ -72,27 +72,22 @@ async function markComplete() {
 	}
 }
 
-// async function markIncomplete() {
-// 	const todoId = this.parentNode.dataset.id
-// 	try {
-// 		const response = await fetch('todos/markIncomplete', {
-// 			method: 'put',
-// 			headers: { 'Content-type': 'application/json' },
-// 			body: JSON.stringify({
-// 				'todoIdFromJSFile': todoId,
-// 			}),
-// 		})
-// 		const data = await response.json()
-// 		console.log(data)
-// 		location.reload()
-// 	} catch (err) {
-// 		console.log(err)
-// 	}
-// }
+let selectedTr;
 
-function focusColor(){
-	console.log('change color')
-	this.classList.toggle('focus')
+focusTask.onclick = function(event) {
+
+  let target = event.target
+
+  if (target.tagName != 'TD') return;
+  highlight(target)
+};
+
+function highlight(tag) {
+  if (selectedTr) {
+    selectedTr.parentNode.classList.remove('highlight');
+  }
+  selectedTr = tag;
+  selectedTr.parentNode.classList.add('highlight');
 }
 
 // Pomodoro timer and break session

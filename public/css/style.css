@@ -46,6 +46,6 @@ body {
 .logout-btn {
 	width: 90%;
 }
-.focus {
-	border: 2px solid rgb(238, 222, 104) !important;
+.highlight {
+	background: rgba(255, 228, 20, 0.295) !important;
 }
